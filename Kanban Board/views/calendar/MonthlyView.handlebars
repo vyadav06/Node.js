@@ -1,0 +1,125 @@
+<div class="row">
+    <span id="userId" style="display:none">{{id}}</span>
+    <div class="col-xs-2 addEvent" style="float:left">
+        <button type="button" id="common_add_event_btn" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-plus"></span>&nbsp;Add Task&nbsp;</button>
+    </div>
+    <div class="col-xs-10 monthSelect" style="float:right">
+        <span style="float:right;margin: 0 22px 0 0;">
+            
+                <button type="button" value="prev" class="btn btn-primary update_month"><span class="glyphicon glyphicon-triangle-left"></span></button>
+        &nbsp;<span id="date_here">Date</span>&nbsp;
+        <button type="button" value="next" class="btn btn-primary update_month"><span class="glyphicon glyphicon-triangle-right"></span></button>
+        </span>
+    </div>
+
+</div>
+
+<br/>
+<div>
+    <div id="calendar-dates" class="flex-container">
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="common_add_event_modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:powderblue">
+                <h1 class="modal-title">Add Task</h1>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="title">Title</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="title" placeholder="Title">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="list">List</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="list" placeholder="backup/todo/doing/done">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="description">Description:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="description" placeholder="Enter a brief description.">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="duedate">Due Date:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="duedate" placeholder="mm/dd/yyyy">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="creationdate">Creation Date</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="creationdate" placeholder="mm//dd//yyyy">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="priority">Priority:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="priority" placeholder="Set to High/Medium/Low">
+                        </div>
+                    </div>
+
+                </form>
+                <div id="warning" class="alert alert-danger hidden">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary " id="add_monthly">Add</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="taskModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" id="task-heading"></h4>
+            </div>
+            <div class="b">
+                <div class="modal-body" id="task-body">
+                    <p><span class="glyphicon glyphicon-pushpin"></span>&nbsp;Todo List: </p>
+                    <div class="list-group" id="todo-list">
+
+                    </div>
+                    <p><span class="glyphicon glyphicon-pencil"></span>&nbsp;Doing List: </p>
+                    <div class="list-group" id="doing-list">
+
+                    </div>
+                    <p><span class="glyphicon glyphicon-floppy-open"></span>&nbsp;Backup List: </p>
+                    <div class="list-group" id="backup-list">
+
+                    </div>
+                    <p><span class="glyphicon glyphicon-ok"></span>&nbsp;Done List: </p>
+                    <div class="list-group" id="done-list">
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>

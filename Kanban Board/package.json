@@ -1,0 +1,35 @@
+{
+  "name": "kanban",
+  "version": "1.0.0",
+  "description": "Final Project for CS546",
+  "main": "app.js",
+  "scripts": {
+    "seed": "node ./tasks/seed.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssetia93/Kanban_CS546"
+  },
+  "author": "Kawaika-A Minesota",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "1.4.3",
+    "bcrypt-nodejs": "0.0.3",
+    "express": "^4.14.0",
+    "express-handlebars": "3.0.0",
+    "mongodb": "^2.2.11",
+    "node-uuid": "^1.4.7",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "xss": "0.3.2",
+    "flash": "1.1.0",
+    "nodemailer": "2.7.0",
+    "async": "2.1.4",
+    "multer": "1.2.0",
+    "fs": "0.0.1-security",
+    "node-schedule": "1.2.0"
+  }
+}

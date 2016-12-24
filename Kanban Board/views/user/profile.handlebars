@@ -1,0 +1,47 @@
+<section>
+	<div class="col-sm-2 col-md-2 col-lg-2 menubar-part">
+		<input type="hidden" id="checkLivalue" name="checkLivalue" value="{{checkListValue}}">
+		<ul class="nav nav-tabs tabs-left menubar-ul">
+			<li id="li-profile" class="active"><a href="users">My Profile</a></li>
+		</ul>
+	</div>
+	<div class="col-sm-10 col-md-10 col-lg-10 user-profile-content">
+		<input type="hidden" id="memberid" name="memberid" value="{{userInfo._id}}">
+		<div class="User-name-det">
+
+			<div class="name-details">
+				<h1>Welcome {{userInfo.firstName}} {{userInfo.lastName}}</h1>
+			</div>
+			<div class=" logout-div float-right">
+				<span class="logout-span">
+		            <a class="btn btn-primary btn-l" href="/signup/logout">Log out</a> 
+		        </span>
+			</div>
+			<div class="update-delete-button-div">
+				<a id="updateProfile" class="float-right btn btn-primary update-profile-btn" href="/signup/memberupdate">Update Profile</a>
+				<button class="float-right btn btn-default update-profile-btn" data-toggle="modal" data-target="#deleteAccountModal">Delete Account</button>
+			</div>
+		</div>
+		{{> (lookup . 'partial') }}
+	</div>
+
+</section>
+
+<div class="modal fade" id="deleteAccountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog " role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h1 class="modal-title " id="myModalLabel">Are you sure to delete your Account ?</h1>
+			</div>
+			<div class="error-text hidden" id="del-account-errorcontainer">
+				<div class="alert alert-danger text-goes-here" id="del-account-error-text"></div>
+			</div>
+
+			<div class="modal-footer  yes-no-btn">
+				<button type="button" class="btn btn-default" id="deleteAccount">Yes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+			</div>
+		</div>
+	</div>
+</div>

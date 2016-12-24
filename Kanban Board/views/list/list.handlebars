@@ -1,0 +1,40 @@
+<div class="page-header">
+    <h1><span class=""></span> You are on list Page:</h1>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div>
+            <table border="1">
+                <tr>
+                    <th>BACKUP</th>
+                    <th>DOING</th>
+                    <th>TODO</th>
+                    <th>DONE</th>
+                </tr>
+                <tr>
+                    <td>
+                        {{#each backup}}
+                        <li><a href="/taskList/{{this._id}}">{{this.title}}</a></li>
+                        {{/each}}
+                    </td>
+                    <td>
+                        {{#each doing}}
+                        <li><a href="/taskList/{{this._id}}">{{this.title}}</a></li>
+                        {{/each}}
+                    </td>
+                    <td>
+                        {{#each todo}}
+                        <li><a href="/taskList/{{this._id}}">{{this.title}}</a></li>
+                        {{/each}}
+                    </td>
+                    <td>
+                        {{#each done}}
+                        <li><a href="/taskList/{{this._id}}">{{this.title}}</a></li>
+                        {{/each}}
+                    </td>
+                </tr>
+            </table>
+
+
+            <a class="link" href="/list/calendar/{{taskID}}">Create/View Tasks in Calendar</a>
+        </div>

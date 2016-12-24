@@ -1,0 +1,22 @@
+<div class="page-header">
+    <h1><span class=""></span> Tasks:</h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div>
+            {{#if tasks}}
+            <p>
+
+                <strong>TITLE  </strong>: {{tasks.taskTitle}}<br>
+                <strong>LIST </strong>: {{tasks.list}}<br>
+                <strong>DESCRIPTION :</strong>: {{tasks.description}}<br>
+                <strong>DUE DATE </strong>: {{tasks.duedate}}<br>
+                <strong>CREATION DATE </strong>: {{tasks.creationdate}}<br>
+                <strong>PRIORITY </strong>: {{tasks.priority}}<br>
+
+            </p>
+            {{/if}}
+            <a class="btn btn-primary btn-l" href="/signup/logout/">Logout</a>
+
+        </div>

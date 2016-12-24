@@ -1,0 +1,18 @@
+<div class="page-header">
+    <h1><span class=""></span> User Profile</h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <div>
+            {{#if users}}
+            <p>
+                <strong>First Name</strong>: {{users.firstName}}<br>
+                <strong>lastName</strong>: {{users.lastName}}<br>
+                <strong>Email</strong>: {{users.email}}<br>
+                <strong>Occupation</strong>: {{users.occupation}}<br>
+            </p>
+            <a class="btn btn-primary btn-l" href="/list/{{users._id}}">View Lists</a> {{/if}}
+
+
+        </div>
